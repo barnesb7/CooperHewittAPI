@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
+    <link th:href="@{/main.css}" type="text/css" rel="stylesheet"/>
 </head>
 <body>
 <h1>Hello from art</h1>
-<div>
-
+<div th:each="artPiece : ${allArt}">
+<p th:text="${artPiece.getTitle()}">Hello</p>
+<img th:src="${artPiece.getWebImage().getUrl()}"/>
 </div>
 
 </body>
