@@ -24,4 +24,14 @@ public class ArtController {
         modelMap.put("allArt", allArt);
         return "index";
     }
+
+    @RequestMapping("/allart")
+    public String displayAllArt(){
+        return "allArt";
+    }
+
+    @RequestMapping("/allsongs")
+    public String displayAllSongs(){
+        return "allSongs";
+    }
 }

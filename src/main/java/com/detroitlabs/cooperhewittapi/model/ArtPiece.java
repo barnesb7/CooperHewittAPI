@@ -7,7 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ArtPiece {
     private String title;
     private WebImage webImage;
-
+    private String principalOrFirstMaker;
 
 
     public String getTitle() {
@@ -28,4 +28,13 @@ public class ArtPiece {
         return webImage;
     }
 
+    @JsonProperty("principalOrFirstMaker")
+    public String getPrincipalOrFirstMaker() {
+        return principalOrFirstMaker;
+    }
+
+    @JsonProperty("principalOrFirstMaker")
+    public void setPrincipalOrFirstMaker(String principalOrFirstMaker) {
+        this.principalOrFirstMaker = principalOrFirstMaker;
+    }
 }
